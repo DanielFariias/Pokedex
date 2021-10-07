@@ -1,2 +1,2 @@
 # Pokedex
-[Link para o site](littlepokedex.netlify.app).
+[Link para o site](https://littlepokedex.netlify.app/).
