@@ -3,12 +3,6 @@ const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`
 const generatePokemonPromises = () => Array(898).fill().map((_, index) => (
   fetch(getPokemonUrl(index + 1)).then(response => response.json())))
 
-
-const typeImage = [
-  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg",
-  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png"
-]
-
 const generateHTML = pokemons => pokemons.reduce((accumulator, { name, id, types }) => {
   const elementsTypes = types.map(typeInfo => typeInfo.type.name)
 
@@ -39,3 +33,7 @@ Promise.all(pokemonPromises)
   .then(generateHTML)
   .then(insertPokemonsIntoPage)
 
+  // const typeImage = [
+  //   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg",
+  //   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png"
+  // ]
