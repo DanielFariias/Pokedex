@@ -16,7 +16,7 @@ const generateHTML = pokemons => pokemons.reduce((accumulator, { name, id, types
       <li class="card ${elementsTypes[0]}">
       <img 
         class="card-image" alt="${name}" 
-        src="${typeImage[0]}" 
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg"
 
       />
         <h2 class="card-title">${id}. ${name}</h2>
